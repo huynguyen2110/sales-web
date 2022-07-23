@@ -1,3 +1,4 @@
+<?php require '../check_admin_login.php'; ?>
 <?php  
 
 $name = $_POST['name'];
@@ -17,7 +18,7 @@ require '../connect.php';
 $sql = "insert into products(name,photo,price,description,manufacturer_id)
 values('$name','$file_name','$price','$description','$manufacturer_id')";
 
-
+header("location:../products");
 
 mysqli_query($connect,$sql);
 mysqli_close($connect);

@@ -1,3 +1,4 @@
+<?php require '../check_admin_login.php'; ?>
 <?php  
 
 $id = $_POST['id'];
@@ -30,7 +31,7 @@ manufacturer_id = '$manufacturer_id'
 where
 id = '$id'";
 
-
+header("location:../products");
 
 mysqli_query($connect,$sql);
 mysqli_close($connect);

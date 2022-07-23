@@ -1,3 +1,10 @@
+<?php  
+	session_start();
+	if(isset($_SESSION['error'])){
+		echo $_SESSION['error'];
+		unset($_SESSION['error']);
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,15 +13,7 @@
 	<title></title>
 </head>
 <body>
-<?php  
-	session_start();
-	if(isset($_SESSION['error'])){
-		echo $_SESSION['error'];
-		unset($_SESSION['error']);
-	}
-?>
-<form method="post" action="process_signup.php">
-	<h1>Form dang ki</h1>
+<form action="process_signup.php" method="post">
 	Ten
 	<input type="text" name="name">
 	<br>
@@ -24,7 +23,14 @@
 	Mat khau
 	<input type="password" name="password">
 	<br>
+	Sdt
+	<input type="text" name="phone_number">
+	<br>
+	Dia chi
+	<input type="text" name="address">
+	<br>
 	<button>Dang ki</button>
 </form>
 </body>
 </html>
+

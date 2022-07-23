@@ -1,3 +1,5 @@
+<?php require '../check_super_admin_login.php'; ?>
+
 <?php  
 if (empty($_POST['name'])){
 	header('location:index.php?error=Phai truyen ma de sua');

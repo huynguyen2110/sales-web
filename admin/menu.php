@@ -12,6 +12,13 @@
 		</a>
 	</li>
 </ul>
+<ul>
+	<li>
+		<a href="../orders">
+			Quan ly don hang
+		</a>
+	</li>
+</ul>
 <?php  
 	if(isset($_GET['error'])){
 ?>
